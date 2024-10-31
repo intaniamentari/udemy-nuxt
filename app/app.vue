@@ -10,5 +10,5 @@
       <NuxtLink to="/dynamic">Dynamic</NuxtLink>
     </li>
   </ul>
-  <NuxtPage></NuxtPage>
+    <NuxtPage />
 </template>

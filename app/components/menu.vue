@@ -1,6 +1,6 @@
 <template>
-	<nav class="font-mono">
-		<ul class="flex space-x-4">
+	<nav>
+		<ul class="flex space-x-4" id="menu">
 			<li>
 				<NuxtLink to="/" class="link">Main</NuxtLink>
 			</li>
@@ -15,5 +15,10 @@
 	/* use tailwind classes style */
 	link {
 		@apply p-1 hover:underline
+	}
+
+	#menu {
+		font-family: "Playwrite GB S", cursive;
+		font-weight: 400;
 	}
 </style>

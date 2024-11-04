@@ -6,7 +6,7 @@
 			</div>
 			<!-- use component menu and it imported automatically -->
 			<Menu />
-			<SwitchTheme />
+			<SwitchTheme class="items-end" />
 		</header>
 		<slot />
 	</div>

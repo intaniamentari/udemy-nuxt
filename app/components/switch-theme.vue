@@ -1,6 +1,6 @@
 <template>
 	<div>
-	  <button @click="changeTheme" class="p-3 dark: border-solid radius-lg">{{ currentIcon }}</button>
+	  <button @click="changeTheme" id="change-theme" class="p-2 border border-solid radius-lg">{{ currentIcon }}</button>
 	</div>
   </template>
   
@@ -18,19 +18,19 @@
   const currentIcon = computed(() => {
 	  switch (modes[currentIndex.value]) {
 		  case "system":
-			  return "System 🖥️"
+			  return "🖥️"
 			  break
 		  case "dark":
-			  return "Dark 🌙"
+			  return "🌙"
 			  break
 		  case "light":
-			  return "Light ☀️"
+			  return "☀️"
 			  break
 		  case "sepia":
-			  return "Coffee ☕"
+			  return "☕"
 			  break
 		  default:
-			  return "System 🖥️"
+			  return "🖥️"
 	  }
   })
 
@@ -49,6 +49,18 @@
   .sepia-mode body {
 	background-color: #f1e7d0;
 	color: #433422;
+  }
+  .sepia-mode #change-theme {
+	border-color: #433422;
+	border-radius: 100%;
+  }
+  .dark-mode #change-theme {
+	border-color: #ebf4f1;
+	border-radius: 100%;
+  }
+  .light-mode #change-theme {
+	border-color: rgb(209 213 219);
+	border-radius: 100%;
   }
   </style>
   

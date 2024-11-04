@@ -16,7 +16,7 @@
 
 <style scoped>
 	/* use tailwind classes style */
-	link {
+	.link {
 		@apply p-1 hover:underline
 	}
 

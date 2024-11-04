@@ -3,7 +3,7 @@
 		<section v-if="pending">Data Pending...</section>
 		<section v-else-if="error">Sorry data error... please try again</section>
 		<section v-else v-for="repositori in filtered" :id="repositori.id">
-			<a :href="repositori.html_url" target="_blank" class="grid p-5 grid-cols-1 rounded-sm border-solid border-2 mb-7 border-gray-300 hover:bg-gray-100">
+			<a :href="repositori.html_url" target="_blank" class="grid p-5 grid-cols-1 rounded-sm border-solid border-2 mb-7 border-gray-300 sepia-hover dark:hover:bg-cyan-900">
 				<div class="flex items-center justify-between mb-4">
 					<h3 class="font-semibold">{{ repositori.name }}</h3>
 					<p>{{ repositori.language }}</p>
@@ -30,3 +30,17 @@
 		}
 	) 
 </script>
+
+<style scoped>
+	.sepia-mode a:hover {
+		background-color: rgb(120 53 15);
+		color: white;
+	}
+	.sepia-mode a {
+		border-color: rgb(120 53 15);
+	}
+
+	.light-mode a:hover {
+		background-color: rgb(245 245 245);
+	}
+</style>

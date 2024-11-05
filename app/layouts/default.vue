@@ -1,6 +1,6 @@
 <template>
 	<div class="container mx-auto max-w-2xl">
-		<header class="flex justify-between items-center mt-5">
+		<header class="flex justify-between items-center mt-5 mb-20">
 			<div>
 				<NuxtLink to="/" class="text-xl font-semibold" id="logo">Intania</NuxtLink>
 			</div>

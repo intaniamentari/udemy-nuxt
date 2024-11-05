@@ -1,7 +1,8 @@
 <template>
-	<div>
-		We Are inside a blog
-	</div>
+	<!-- use prose-invert for change the color theme text when theme is dark -->
+	<article class="prose dark:prose-invert">
+		<ContentDoc />
+	</article>
 </template>
 
 <script setup>

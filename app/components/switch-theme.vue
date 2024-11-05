@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div v-if="isMounted">
 	  <button @click="changeTheme" id="change-theme" class="p-2 border border-solid radius-lg">{{ currentIcon }}</button>
 	</div>
   </template>
@@ -7,8 +7,15 @@
   <script setup>
   const colorMode = useColorMode()
   const modes = ['system', 'dark', 'light', 'sepia']
-  const currentIndex = ref(modes.indexOf(colorMode.preference))
 
+  // ref is variable that we can monitor it reaktif (see comparison before and after)
+  const currentIndex = ref(modes.indexOf(colorMode.preference))
+  const isMounted = ref(false)
+
+  // vue hook to check content is finished rendering from client side
+  onMounted(() => {
+	isMounted.value = true
+  })
 
   const changeTheme = () => {
   	currentIndex.value = (currentIndex.value + 1) % modes.length

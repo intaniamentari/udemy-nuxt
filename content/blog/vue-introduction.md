@@ -1,4 +1,5 @@
 ---
+title: Vue For Begginer
 description: A beginner's guide to getting started with Vue 3.
 image: /images/vue.png
 head:

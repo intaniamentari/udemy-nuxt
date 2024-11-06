@@ -1,3 +1,9 @@
+---
+title: 'First Blog'
+description: 'Happy new year!'
+---
+
+
 # First post on BLOG
 
 ## Second Part

@@ -7,6 +7,15 @@ export default defineNuxtConfig({
 	future: {
 		compatibilityVersion: 4,
 	},
+	content: {
+		highlight: {
+		  theme: {
+			default: 'vitesse-light',
+			dark: 'vitesse-dark',
+			sepia: 'monokai'
+		  }
+		}
+	},
   	modules: [
 		'@nuxtjs/tailwindcss', 
 		'@nuxtjs/color-mode',

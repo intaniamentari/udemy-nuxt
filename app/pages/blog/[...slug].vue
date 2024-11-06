@@ -1,6 +1,6 @@
 <template>
 	<!-- use prose-invert for change the color theme text when theme is dark -->
-	<article class="prose dark:prose-invert">
+	<article class="prose dark:prose-invert prose-pre:bg-white prose-pre:dark:bg-gray-900">
 		<ContentDoc />
 	</article>
 </template>

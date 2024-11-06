@@ -15,36 +15,62 @@ head:
       content: 'About Me ❤️'
 ---
 
-# Hi Everyone ❤️
+# About Me ❤️
 
-Welcome to my profile! I'm Intania Mentari, and I'm glad you're here to learn more about me. I've created this space not only to share my professional journey but also to improve my English writing skills—so this page is my way of practicing clear, engaging communication. Here’s a bit more about me!
+I'm Intan, a dedicated Back-End Developer based in Bali, Indonesia with over 3 years of experience in web development using Laravel Framework. My expertise includes designing and developing scalable web applications, and integrating third-party services. I also implementing APIs to improve mobile app functionality and facilitate seamless data sharing across platforms.
 
-## About Me
+## Education
 
-I'm a Back-End Developer with a deep passion for creating and optimizing the systems behind web applications. My career journey has led me to work as a Web Developer, where I can apply both my technical skills and my curiosity to build robust and efficient websites. Although I wear many hats, back-end development is truly where my heart lies. I love diving into code, solving complex problems, and enhancing the performance of web applications.
+- **Bachelor's Degree - Information System**  
+  Institut Teknologi dan Bisnis STIKOM Bali, 2022
 
-## What I Do
+## Experience
 
-By day, I work as a Web Developer, handling a mix of front-end and back-end tasks to create functional and user-friendly websites. In my personal projects, though, I focus primarily on back-end tasks—it's the logic and structure that excite me the most. I'm always exploring ways to make processes more efficient and code more elegant. Whether it's database management, server scripting, or API development, I’m constantly motivated by the possibilities in back-end development.
+- **Back-End Developer**  
+  Appkey — 2022 to 2024  
+  *Developed APIs using Laravel and integrated third-party services, maintained and enhanced the admin website, identified and resolved bugs, managed project timelines, and tackled complex feature implementations.*
 
-## Hobbies
+- **Junior Programmer**  
+  DISDIKBUD Karanganyar — 2019  
+  *Implemented responsive web designs, structured and optimized database architecture, and developed efficient workflow processes.*
 
-Outside of coding, I have a few hobbies that keep me energized and balanced:
-- **Reading**: I enjoy reading books and articles on various subjects, especially tech trends and personal development.
-- **Walking**: I love going for walks and taking in the scenery. Being outdoors helps me clear my mind and appreciate nature.
-- **Cooking**: Experimenting in the kitchen is one of my favorite ways to be creative outside of tech. I love trying new recipes and flavors.
+## Projects
 
-## Skills
+- **Taxi Admin**  
+  *A short description of the project, your role, and the technologies used.*
 
-Over the years, I've developed a strong set of skills that I'm continually working to improve. Here are a few of my core areas of expertise:
+- **[Project Title]**  
+  *A short description of the project, your role, and the technologies used.*
 
-- **Back-End Development**: Proficient in languages and frameworks like Node.js, Python, and PHP, with a focus on building efficient and scalable systems.
-- **Database Management**: Experienced with MySQL, MongoDB, and PostgreSQL, ensuring data is stored, organized, and accessible as efficiently as possible.
-- **Web Development**: Familiar with front-end languages like HTML, CSS, and JavaScript, allowing me to understand full-stack development and improve overall project communication.
-- **API Integration**: Skilled at creating and integrating RESTful APIs to connect different systems seamlessly.
+## Skills & Tools
 
-## Goals
+#### Technical Skills
 
-I hope this page gives you a good sense of who I am and what I do. My goal is to keep growing as a developer and to take on new challenges that allow me to deepen my skills in back-end development. I'm always open to collaboration, feedback, and learning opportunities!
+- **Programming Languages**: JavaScript, PHP
+- **Frameworks & Libraries**: Nuxt.js, Laravel, Bootstrap, JQuery, TailwindCSS, Swagger API
+- **API**: Midtrans, Shipper
+- **Other**: Git, Postman, Shared Hosting, VPS, OS Windows/Linux
 
-Thanks for reading and getting to know me. I look forward to connecting with you!
+#### Soft Skills
+
+- **Problem Solving**
+- **Time Management**
+- **Team Collaboration**
+
+## My Philosophy
+
+I believe that every problem has a solution, so I am always committed to finding answers and overcoming any challenge I encounter. My goal is to become proficient in backend development and DevOps, enabling me to apply these skills across other technologies, such as AI, frameworks, and various tools.
+
+## When I'm Not Coding
+
+Outside of work, I enjoy taking leisurely walks to stay active and appreciate the outdoors. I also love cooking—because eating is my favorite hobby! Exploring culinary spots and visiting exhibitions are some of my go-to activities. When I feel like spending time alone, I enjoy reading or browsing coding hacks and tips on social media.
+
+## Let's Connect
+
+I'm always excited to meet new people and explore new opportunities. Feel free to connect with me on [LinkedIn](https://id.linkedin.com/in/intania-mentari/in).
+
+---
+
+**Quote**
+
+> There’s nothing in life to regret.

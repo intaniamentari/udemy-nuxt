@@ -1,13 +1,9 @@
 <template>
-	<h2 class="mt-10 text-2xl font-semibold mb-10">My Blog ✍️</h2>
-	<div class="column">
-		<p>title</p>
-		<p>description</p>
-	</div>
+	<h2 class="mt-10 text-2xl font-semibold mb-10">My Blog List</h2>
 	<div v-for="post in posts" :key="post._path">
 		<NuxtLink :to="post._path">
 			<div class="prose dark:prose-invert grid p-5 grid-cols-1 rounded-lg border-solid border-2 mb-7 border-gray-300 sepia-hover dark:hover:bg-cyan-900">
-				<h3>{{ post.title }}</h3>
+				<h3 class="">{{ post.title }}</h3>
 				<p>{{ post.description }}</p>
 			</div>
 		</NuxtLink>
@@ -44,4 +40,10 @@
 	.light-mode h3 {
 		color: black;
 	}
+
+	h1,h2,h3,h4 {
+		font-family: "Playwrite GB S"; 
+		font-weight: 400
+	} 
+
 </style>

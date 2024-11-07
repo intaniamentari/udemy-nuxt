@@ -16,58 +16,21 @@ head:
       content: 'About Me ❤️'
 ---
 
-# Hi, I'm Intania Mentari
+# Hi, I'm Intania Mentari Mustika
 
-## A Passionate [Your Profession]
+Welcome to my portfolio! 🎉
 
-Welcome to my portfolio! I specialize in creating innovative solutions and crafting beautiful, user-friendly designs. With a keen eye for detail and a commitment to excellence, I bring ideas to life through [mention your main skills or services, e.g., web development, graphic design, etc.].
+I’m glad you stopped by, and I'm excited to share a bit about myself. So, here it goes: I’m a Back-End Developer, and I've been on this career path for almost three years now (still quite the journey ahead! 💪🚀). My day-to-day work includes creating features, developing admin dashboards, building APIs, and sometimes even working with servers 🖥️. If we’re talking future goals, I'd love to become a DevOps Engineer 👩‍💻! Servers fascinate me, and I’ve been getting pretty comfortable with a few CLI commands here and there 💻.
 
-### Featured Projects
+A little more about me—I value freedom and enjoy getting skilled in things that bring me joy, like advancing in my career, managing my time effectively, and even cooking (I'm a big foodie! 🍲🍰).
 
-<div class="featured-projects">
-  <div class="project">
-    ![Project 1](path/to/project1-image.jpg)
-    ### [Project Title 1](link-to-project1)
-    A brief description of what this project is about and the technologies used.
-  </div>
-  <div class="project">
-    ![Project 2](path/to/project2-image.jpg)
-    ### [Project Title 2](link-to-project2)
-    A brief description of what this project is about and the technologies used.
-  </div>
-  <div class="project">
-    ![Project 3](path/to/project3-image.jpg)
-    ### [Project Title 3](link-to-project3)
-    A brief description of what this project is about and the technologies used.
-  </div>
-</div>
+In my free time, I’m often doing something active (walking is a favorite 👟🌞) or food-related (whether it’s trying new places or hunting down delicious bites—yum! 🍜🫰).
 
-### My Skills
+I have to admit, I can get easily distracted by things that spark my curiosity, like new framework updates (I'm a big Laravel fan 🤘✨), tech trends, or cool new libraries. It’s easy to get carried away! To keep myself on track, I usually jot down these things in Google Keep to check out later when I have free time 📋📝.
 
-- **Web Development**: HTML, CSS, JavaScript, Vue.js, Nuxt.js
-- **Design**: Adobe Photoshop, Illustrator, Figma
-- **Other Skills**: Responsive Design, SEO Optimization, Version Control (Git)
+Oh, and are you a cat lover? I absolutely adore cats—their presence brightens up my world 😸💕. Along with that, chocolate 🍫 has been my go-to whenever I hit a mental block or need a boost while working through back-end challenges 🧩⚙️.
 
-### What I Offer
+This intro might be getting a bit long, so let’s wrap it up here. Thank you so much for taking the time to read a little about me! 😊
 
-I offer a range of services to help you achieve your goals, including:
-
-- **Custom Website Development**
-- **UI/UX Design**
-- **E-commerce Solutions**
-- **Maintenance and Support**
-
-### Testimonials
-
-> "Working with [Your Name] was a fantastic experience. They delivered a high-quality product on time and exceeded our expectations."  
-> — [Client Name], [Client Company]
-
-### Get in Touch
-
-I'm always open to new opportunities and collaborations. Feel free to [contact me](link-to-contact-page) or connect with me on [LinkedIn](https://id.linkedin.com/in/intania-mentari/in).
-
----
-
-**Follow Me:**
-
-[[LinkedIn]](https://id.linkedin.com/in/intania-mentari/in) [[GitHub]](https://github.com/intaniamentari/)
+With ❤️,  
+Intania Mentari Mustika

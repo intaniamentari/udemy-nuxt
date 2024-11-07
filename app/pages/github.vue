@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2 class="mt-10 text-2xl font-semibold mb-10">Projects</h2>
+		<h2 class="mt-10 text-2xl font-semibold mb-10">GitHub Collection</h2>
 		<projectList />
 	</div>
 </template>

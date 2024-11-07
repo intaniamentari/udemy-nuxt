@@ -15,16 +15,16 @@ head:
       content: 'About Me ❤️'
 ---
 
-# About Me ❤️
+# About Me
 
 I'm Intan, a dedicated Back-End Developer based in Bali, Indonesia with over 3 years of experience in web development using Laravel Framework. My expertise includes designing and developing scalable web applications, and integrating third-party services. I also implementing APIs to improve mobile app functionality and facilitate seamless data sharing across platforms.
 
-## Education
+## 🤓Education
 
 - **Bachelor's Degree - Information System**  
   Institut Teknologi dan Bisnis STIKOM Bali, 2022
 
-## Experience
+## 🤯Experience
 
 - **Back-End Developer**  
   Appkey — 2022 to 2024  
@@ -34,7 +34,7 @@ I'm Intan, a dedicated Back-End Developer based in Bali, Indonesia with over 3 y
   DISDIKBUD Karanganyar — 2019  
   *Implemented responsive web designs, structured and optimized database architecture, and developed efficient workflow processes.*
 
-## Projects
+## 🤩Projects
 
 - **Taxi Admin**  
   *A short description of the project, your role, and the technologies used.*
@@ -42,7 +42,7 @@ I'm Intan, a dedicated Back-End Developer based in Bali, Indonesia with over 3 y
 - **[Project Title]**  
   *A short description of the project, your role, and the technologies used.*
 
-## Skills & Tools
+## 😎Skills & Tools
 
 #### Technical Skills
 
@@ -57,15 +57,15 @@ I'm Intan, a dedicated Back-End Developer based in Bali, Indonesia with over 3 y
 - **Time Management**
 - **Team Collaboration**
 
-## My Philosophy
+## 😌My Philosophy
 
 I believe that every problem has a solution, so I am always committed to finding answers and overcoming any challenge I encounter. My goal is to become proficient in backend development and DevOps, enabling me to apply these skills across other technologies, such as AI, frameworks, and various tools.
 
-## When I'm Not Coding
+## 🤗When I'm Not Coding
 
 Outside of work, I enjoy taking leisurely walks to stay active and appreciate the outdoors. I also love cooking—because eating is my favorite hobby! Exploring culinary spots and visiting exhibitions are some of my go-to activities. When I feel like spending time alone, I enjoy reading or browsing coding hacks and tips on social media.
 
-## Let's Connect
+## 🙌Let's Connect
 
 I'm always excited to meet new people and explore new opportunities. Feel free to connect with me on [LinkedIn](https://id.linkedin.com/in/intania-mentari/in).
 
@@ -74,3 +74,9 @@ I'm always excited to meet new people and explore new opportunities. Feel free t
 **Quote**
 
 > There’s nothing in life to regret.
+>>
+>This quote reminds us that every experience, whether joyful or painful, shapes us into who we are. Life’s journey is filled with choices and actions that may not always lead to immediate happiness or success, but each one teaches us something valuable. Regret often weighs us down, making us feel stuck in the past, yet if we embrace every moment as a lesson, we can grow wiser and stronger.
+>
+>Imagine each choice as a stepping stone, guiding you forward. Mistakes? They’re just markers of growth. Failures? Moments of learning. Regret only comes when we refuse to see the hidden gems of wisdom and resilience these moments offer. So, live with courage, let go of the need to be perfect, and trust that every chapter in your life adds to your unique story.
+>
+>Remember, it’s not about avoiding mistakes but about growing from them. Embrace each moment, look forward, and understand that everything in life has its purpose. There’s nothing to regret—only lessons to cherish.

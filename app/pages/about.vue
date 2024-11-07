@@ -1,6 +1,7 @@
 <template>
     <article class="prose dark:prose-invert prose-h1:text-2xl prose-a:no-underline mb-20">
 		<ContentDoc path="/about" />
+		<IconLink />
 	</article>
 </template>
 

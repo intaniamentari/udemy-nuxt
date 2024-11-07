@@ -2,6 +2,7 @@
     <!-- You must keep add this for route "/" -->
 	<div class="prose dark:prose-invert prose-img:w-10 prose-a:no-underline prose-h1:text-2xl prose-h2:text-2xl mb-20">
 		<ContentDoc />
+		<IconLink />
 	</div>
 </template>
 

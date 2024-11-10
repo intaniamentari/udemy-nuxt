@@ -6,6 +6,7 @@ head:
   meta:
     - name: 'og:image'
       content: /images/vue.png
+toc: true
 ---
 # Introduction to Vue 3
 
@@ -29,7 +30,7 @@ Vue 3 comes with several exciting features that make it an excellent choice for 
 
 ---
 
-## Getting Started with Vue 3
+### Getting Started with Vue 3
 
 Here's a basic Vue 3 application setup:
 

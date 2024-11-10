@@ -1,5 +1,5 @@
 <template>
-    <article class="prose dark:prose-invert prose-h1:text-2xl prose-a:no-underline mb-20">
+    <article class="prose dark:prose-invert prose-h1:text-2xl prose-a:no-underline mb-20 max-w-none">
 		<ContentDoc path="/about" />
 		<IconLink />
 	</article>

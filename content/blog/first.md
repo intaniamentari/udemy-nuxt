@@ -1,6 +1,7 @@
 ---
 title: 'First Blog'
 description: 'Happy new year!'
+toc: true
 ---
 
 

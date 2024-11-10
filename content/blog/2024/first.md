@@ -13,6 +13,7 @@ head:
       content: '© 2024 NuxtLabs'
     - name: 'og:title'
       content: 'This is an OpenGraph title'
+toc: true
 ---
 
 # First post on my website in 2024

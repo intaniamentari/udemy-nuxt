@@ -1,12 +1,12 @@
 <template>
 	<div class="container mx-auto max-w-4xl">
-		<header class="grid grid-cols-2 gap-7 place-content-stretch lg:flex  lg:justify-between items-center mt-5 mb-20">
+		<header class="flex justify-between items-center mt-5 mb-20">
 			<div class="hidden lg:block">
 				<NuxtLink to="/" class="text-xl font-semibold" id="logo">Intania</NuxtLink>
 			</div>
 			<!-- use component menu and it imported automatically -->
 			<Menu />
-			<SwitchTheme class="flex-none lg:flex-auto text-end lg:items-end" />
+			<SwitchTheme class="items-end" />
 		</header>
 		<slot />
 	</div>

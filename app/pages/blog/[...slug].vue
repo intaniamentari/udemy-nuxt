@@ -4,10 +4,10 @@
 		<!-- access the main content : doc -->
 		<ContentDoc v-slot="{doc}">
 			<div class="grid grid-cols-6 gap-16">
-				<div :class="{'col-span-4': doc.toc, 'col-span-6': !doc.toc}">
+				<div :class="{'lg:col-span-4 col-span-6': doc.toc, 'col-span-6': !doc.toc}">
 					<ContentRenderer :value="doc" />
 				</div>
-				<div class="col-span-2" v-if="doc.toc">
+				<div class="hidden lg:block lg:col-span-2" v-if="doc.toc">
 					<aside class="top-8 sticky not-prose">
 						<div class="font-semibold">Table of Content</div>
 						<nav>

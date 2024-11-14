@@ -1,0 +1,1 @@
+export const summaryOptions = ['Yearly', 'Monthly', 'Daily']

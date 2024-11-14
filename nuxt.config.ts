@@ -16,11 +16,6 @@ export default defineNuxtConfig({
 		  }
 		}
 	},
-	nitro: {
-		prerender: {
-		  routes: ['/server/sitemap.xml']
-		}
-	},
   	modules: [
 		'@nuxtjs/tailwindcss', 
 		'@nuxtjs/color-mode',

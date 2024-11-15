@@ -11,6 +11,12 @@
 		<Trend title="Investments" :amount="4000" :last-amount="1000" :loading="false" />
 		<Trend title="Saving" :amount="4000" :last-amount="9000" :loading="false" />
 	</section>
+
+	<section>
+		<Transaction />
+		<Transaction />
+		<Transaction />
+	</section>
 </template>
 
 <script setup>

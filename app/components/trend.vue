@@ -23,6 +23,7 @@
 
 <script setup>
 import { useCurrency } from '~/composables/useCurrency';
+import Transaction from './transaction.vue';
 
 	const props = defineProps({
 		title: String,

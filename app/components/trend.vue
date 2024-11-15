@@ -1,20 +1,20 @@
 <template>
 	<div>
-		<div class="font-bold" :class="[color]">{{ title }}</div>
+		<div class="font-bold" :class="{'green': trendingUp, 'red': !trendingUp}">{{ title }}</div>
 	
 		<div class="text-2xl font-extrabold text-black dark:text-white mb-2">
 			<USkeleton v-if="loading" class="h-8 w-full"  />
 			<div v-else>
-				{{ amount }}
+				{{ currency }}
 			</div>
 		</div>
 	
 		<div>
 			<USkeleton v-if="loading" class="h-6 w-full"  />
 			<div v-else class="flex space-x-1 items-center text-sm">
-				<UIcon name="i-hugeicons-trade-up" class="w-6 h-6" :class="[color]" />
+				<UIcon :name="icon" class="w-6 h-6" :class="{'green': trendingUp, 'red': !trendingUp}" />
 				<div class="text-gray-500 dark:text-gray-400">
-					30% vs last period
+					{{ percentage }} vs last period
 				</div>
 			</div>
 		</div>
@@ -22,12 +22,28 @@
 </template>
 
 <script setup>
-	defineProps({
+import { useCurrency } from '~/composables/useCurrency';
+
+	const props = defineProps({
 		title: String,
 		amount: Number,
 		loading: Boolean,
 		lastAmount: Number,
 		color:String
+	})
+
+	const { currency } = useCurrency(props.amount)
+
+	const trendingUp = computed(() => props.lastAmount <= props.amount)
+	const icon = computed(() => trendingUp.value ? 'i-hugeicons-trade-up' : 'i-hugeicons-trade-down')
+
+	const percentage = computed(() => {
+		if (props.amount == 0 || props.lastAmount == 0) '-%'
+
+		let bigger = Math.max(props.amount, props.lastAmount)
+		let lower = Math.min(props.amount, props.lastAmount)
+
+		return `${Math.ceil(((bigger - lower) / lower) * 100)}%`
 	})
 </script>
 

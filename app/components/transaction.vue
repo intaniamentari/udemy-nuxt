@@ -3,21 +3,29 @@
 		<div class="flex items-center justify-between">
 			<div class="flex items-center space-x-1">
 				<UIcon name="i-hugeicons-arrow-up-right-01" class="w-5 h-5 text-green-600" />
-				<p>Salary</p>
+				<p>{{ transaction.description }}</p>
 			</div>
-			<UBadge color="white" variant="solid">category</UBadge>
+			<UBadge color="white" variant="solid" v-if="transaction.category">{{ transaction.category }}</UBadge>
 		</div>
-		<div class="flex space-x-2 justify-end">
+		<div class="flex items-center space-x-2 justify-end">
 			<p>{{ currency }}</p>
 			<UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-				<UButton color="white" label="Options" trailing-icon="i-heroicons-chevron-down-20-solid" />
+				<!-- variant ghost make button without border -->
+				<UButton color="white" variant="ghost" trailing-icon="i-hugeicons-drag-drop-vertical" />
 			</UDropdown>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	const {currency} = useCurrency(3000)
+	const props = defineProps({
+		transaction: Object
+	})
+
+	console.log(props.transaction)
+
+	const { currency } = useCurrency(props.transaction.amount)
+
 	const items = [
 		[
 			{

@@ -12,7 +12,11 @@
 	</section>
 
 	<section>
-		<Transaction v-for="transaction in transactions" :key="transaction.id" :transaction="transaction" />
+		<!-- (value, key) in Object -->
+		<div v-for="(transactions, date) in groupByTime" :key="date" class="mb-20">
+			<TransactionDailySummary :date="date" :transactions="transactions" />
+			<Transaction v-for="transaction in transactions" :key="transaction.id" :transaction="transaction" />
+		</div>
 	</section>
 </template>
 
@@ -34,4 +38,27 @@
 		return data
 	})
 
+	/**
+	 * If you're debugging, you can use console.log inside the computed property, 
+	 * but remember that it'll be executed every time the property is recomputed.
+	 */
+	const groupByTime = computed(() => {
+		let timeGroup = {}
+
+		// make const on for function
+		for (const transaction of transactions.value) {
+			// '2024-11-15T12:14:18.18547+00:00'
+			// split: ['2024-11-15', '12:14:18.18547+00:00']
+			// [0] : '2024-11-15'
+			const date = new Date(transaction.created_at).toISOString().split('T')[0]
+
+			if (!timeGroup[date]) {
+				timeGroup[date] = []
+			}
+
+			timeGroup[date].push(transaction)
+		}
+
+		return timeGroup;
+	})
 </script>

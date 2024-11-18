@@ -11,7 +11,8 @@
 			<p>{{ currency }}</p>
 			<UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
 				<!-- variant ghost make button without border -->
-				<UButton color="white" variant="ghost" trailing-icon="i-hugeicons-drag-drop-vertical" />
+				<!-- :loading is UButton have -->
+				<UButton color="white" variant="ghost" trailing-icon="i-hugeicons-drag-drop-vertical" :loading="isLoading" />
 			</UDropdown>
 		</div>
 	</div>
@@ -37,6 +38,33 @@
 
 	const { currency } = useCurrency(props.transaction.amount)
 
+	const isLoading = ref(false)
+	const supabase = useSupabaseClient()
+	const toast = useToast()
+
+	const deleteToast = async () => {
+		isLoading.value = true
+
+		try {
+			await supabase.from('transactions').delete().eq('id', props.transaction.id)
+
+			toast.add({
+				title: 'Success deleted!',
+				icon: 'i-hugeicons-checkmark-circle-03',
+				color: 'green'
+			})
+
+		} catch (error) {
+			toast.add({
+				title: 'Error',
+				icon: 'i-hugeicons-bug-02',
+				color: 'red'
+			})
+		} finally {
+			isLoading.value = false
+		}
+	} 
+
 	const items = [
 		[
 			{
@@ -49,9 +77,7 @@
 			{
 				label: 'Detete',
 				icon: 'i-hugeicons-delete-02',
-				click: () => {
-					console.log('Delete')
-				}
+				click: deleteToast
 			},
 		]
 	]

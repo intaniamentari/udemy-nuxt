@@ -5,10 +5,22 @@
 	</section>
 
 	<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-16 mb-20">
-		<Trend title="Income" :amount="4000" :last-amount="1000" :loading="isLoading" />
-		<Trend title="Expense" :amount="4000" :last-amount="5000" :loading="isLoading" />
+		<Trend title="Income" :amount="incomeTotal" :last-amount="1000" :loading="isLoading" />
+		<Trend title="Expense" :amount="expenseTotal" :last-amount="5000" :loading="isLoading" />
 		<Trend title="Investments" :amount="4000" :last-amount="1000" :loading="isLoading" />
 		<Trend title="Saving" :amount="4000" :last-amount="9000" :loading="isLoading" />
+	</section>
+
+	<section class="flex justify-between mb-10 items-center">
+		<div>
+			<h2 class="text-2xl font-extrabold">Transaction</h2>
+			<div class="text-gray-500 dark:text-gray-400">
+				You have {{ incomeCount }} incomes and {{ expenseCount }} expense count in this period
+			</div>
+		</div>
+		<div>
+			<UButton icon="i-hugeicons-plus-sign-circle" color="white" variant="solid" />
+		</div>
 	</section>
 
 	<section v-if="!isLoading">
@@ -81,5 +93,43 @@
 		}
 
 		return timeGroup;
+	})
+
+	const income = computed(() => {
+		return transactions.value.filter(t => t.type == "Income")
+	})
+	const expense = computed(() => {
+		return transactions.value.filter(t => t.type == "Expense")
+	})
+
+	console.log([
+		'RETURN',
+		expense,
+		income
+	])
+
+	console.log(income.value)
+	console.log(expense.value)
+
+	const incomeCount = computed(() => income.value.length)
+	const expenseCount = computed(() => expense.value.length)
+
+	const incomeTotal = computed(() => {
+		//  argument sum (this the iteration) and transaction (this is the value iteration)
+		// initial value sum is 0
+		if (incomeCount) {
+			return income.value.reduce((sum, transaction) => sum + transaction.amount, 0)
+		}
+
+		return 0
+	})
+	const expenseTotal = computed(() => {
+		//  argument sum (this the iteration) and transaction (this is the value iteration)
+		// initial value sum is 0
+		if (expenseCount) {
+			return expense.value.reduce((sum, transaction) => sum + transaction.amount, 0)
+		}
+
+		return 0
 	})
 </script>

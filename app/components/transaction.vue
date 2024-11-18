@@ -23,6 +23,9 @@
 		transaction: Object
 	})
 
+	// create name emits
+	const emit = defineEmits(['deleted'])
+
 	const isIncome = computed(() => {
 		// return props.transaction.type == "Income" || props.transaction.type == "Incvestment" || props.transaction.type == "Saving"
 		return ["Income", "Investment", "Saving"].includes(props.transaction.type);
@@ -53,6 +56,8 @@
 				icon: 'i-hugeicons-checkmark-circle-03',
 				color: 'green'
 			})
+
+			emit('deleted', props.transaction.id)
 
 		} catch (error) {
 			toast.add({

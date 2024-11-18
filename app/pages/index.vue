@@ -5,18 +5,22 @@
 	</section>
 
 	<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-16 mb-20">
-		<Trend title="Income" :amount="4000" :last-amount="1000" :loading="false" />
-		<Trend title="Expense" :amount="4000" :last-amount="5000" :loading="false" />
-		<Trend title="Investments" :amount="4000" :last-amount="1000" :loading="false" />
-		<Trend title="Saving" :amount="4000" :last-amount="9000" :loading="false" />
+		<Trend title="Income" :amount="4000" :last-amount="1000" :loading="isLoading" />
+		<Trend title="Expense" :amount="4000" :last-amount="5000" :loading="isLoading" />
+		<Trend title="Investments" :amount="4000" :last-amount="1000" :loading="isLoading" />
+		<Trend title="Saving" :amount="4000" :last-amount="9000" :loading="isLoading" />
 	</section>
 
-	<section>
+	<section v-if="!isLoading">
 		<!-- (value, key) in Object -->
 		<div v-for="(transactions, date) in groupByTime" :key="date" class="mb-20">
 			<TransactionDailySummary :date="date" :transactions="transactions" />
-			<Transaction v-for="transaction in transactions" :key="transaction.id" :transaction="transaction" />
+			<Transaction v-for="transaction in transactions" :key="transaction.id" :transaction="transaction" @deleted="refreshTransaction()" />
 		</div>
+	</section>
+
+	<section v-else>
+		<USkeleton class="h-8 w-full mb-2" v-for="i in 4" :key="i" />
 	</section>
 </template>
 
@@ -25,18 +29,35 @@
 	// ref() use for get newst data from DOM automaticaly [just use for primitive value]
 	// reactive() same like ref() but it use for object and array
 	const optionSelected = ref(summaryOptions[1])
-
 	const supabase = useSupabaseClient()
+	
+	const transactions = ref([])
+	const isLoading = ref(false)
 
-	const { data: transactions } = await useAsyncData('transactions', async () => {
-		const { data, error } = await supabase
-			.from('transactions')
-			.select()
+	const fetchTransactions = async () => {
+		isLoading.value = true
 
-		if (error) return []
+		try {
+			const { data } = await useAsyncData('transactions', async () => {
+				const { data, error } = await supabase
+					.from('transactions')
+					.select()
 
-		return data
-	})
+				if (error) return []
+
+				return data // just fill value to the const data
+			})
+
+			return data.value // fill value to const fetchTransactions
+		} finally {
+			isLoading.value = false
+		}
+		
+	}
+
+	// refresh data
+	const refreshTransaction = async () => transactions.value = await fetchTransactions()	
+	await refreshTransaction()
 
 	/**
 	 * If you're debugging, you can use console.log inside the computed property, 

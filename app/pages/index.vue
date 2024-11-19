@@ -19,7 +19,8 @@
 			</div>
 		</div>
 		<div>
-			<UButton icon="i-hugeicons-plus-sign-circle" color="white" variant="solid" />
+			<UButton icon="i-hugeicons-plus-sign-circle" color="white" variant="solid" @click="isOpen = true" />
+			<TransactionModal v-model="isOpen" />
 		</div>
 	</section>
 
@@ -45,6 +46,8 @@
 	
 	const transactions = ref([])
 	const isLoading = ref(false)
+
+	const isOpen = ref(false)
 
 	const fetchTransactions = async () => {
 		isLoading.value = true
@@ -101,15 +104,6 @@
 	const expense = computed(() => {
 		return transactions.value.filter(t => t.type == "Expense")
 	})
-
-	console.log([
-		'RETURN',
-		expense,
-		income
-	])
-
-	console.log(income.value)
-	console.log(expense.value)
 
 	const incomeCount = computed(() => income.value.length)
 	const expenseCount = computed(() => expense.value.length)

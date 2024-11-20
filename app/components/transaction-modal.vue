@@ -13,13 +13,16 @@
 					<UInput v-model="state.amount" type="number" />
 				</UFormGroup>
 				<UFormGroup label="Date" name="created_at" required class="mb-4">
-					<UInput v-mode="state.date" type="date" icon="i-hugeicons-calendar-03" />
+					<UInput v-model="state.date" type="date" icon="i-hugeicons-calendar-03" />
 				</UFormGroup>
+
+				<!-- categories in different types -->
 				<UFormGroup label="Category" name="category" class="mb-4">
-					<USelect v-model="state.category" :options="categories" />
+					<USelect v-model="state.category" :options="categorySelected" />
 				</UFormGroup>
+
 				<UFormGroup label="Description" name="description" class="mb-4">
-					<UTextarea v-mode="state.description" color="white" variant="outline" placeholder="" />
+					<UTextarea v-model="state.description" color="white" variant="outline" placeholder="" />
 				</UFormGroup>
 			</UForm>
 
@@ -32,7 +35,7 @@
 </template>
 
 <script setup>
-	import { types, categories } from '~/constant';
+	import { types, categories, expenseCategory, incomeCategory, investmentCategory, savingCategory } from '~/constant';
 	import { z } from 'zod'
 
 	const props = defineProps({
@@ -53,18 +56,33 @@
 		amount: z.number().positive('Amount must be greater than 0'),
 		description: z.string().optional(),
 		created_at: z.string(),
+		type: z.string(),
+		category: z.string()
 	})
-
-	const typeSelected = ref(types[0])
-	const categorySelected = ref(categories[0])
 
 	// the default value in form input
 	const state = ref({
-		'type': typeSelected,
+		'type': types[0],
 		'amount': 0,
 		'description': undefined,
 		'date': undefined,
-		'category': categorySelected
+		'category': expenseCategory[0]
 	})
 
+	const categorySelected = computed(() => {
+			switch (state.value.type) {
+				case 'Income':
+					return incomeCategory;
+				case 'Expense':
+					return expenseCategory;
+				case 'Investments':
+					return investmentCategory;
+				default:
+					return savingCategory;
+		}
+	});
+
+	watch(() => state.value.type, (newType) => {
+		state.value.category = categorySelected.value[0]
+	})
 </script>

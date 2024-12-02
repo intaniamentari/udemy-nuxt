@@ -48,9 +48,19 @@
 	const modalOpen = computed({
 		get: () => props.modalOpen,
 		set: (value) => {
-			emit('update:modalOpen', value)
+			emit('update:modalOpen', value) 
+			if (!value) {
+				resetForm();
+			}
 		}
 	})
+
+	// Watch for changes in modalOpen to reset the form if needed
+	watch(() => props.modalOpen, (newVal) => {
+		if (!newVal) {
+		resetForm();  // Reset form if modal is closed
+		}
+	});
 
 	const schema = z.object({
 		amount: z.number().positive('Amount must be greater than 0'),
@@ -61,13 +71,20 @@
 	})
 
 	// the default value in form input
-	const state = ref({
+	const stateDefault = ref({
 		'type': types[0],
 		'amount': 0,
 		'description': undefined,
 		'date': undefined,
 		'category': expenseCategory[0]
 	})
+
+	const state = ref({ ...stateDefault.value })
+
+	const resetForm = () => {
+		state.value = {...stateDefault.value}; // copy value default to state
+		console.log(state.value)
+	};
 
 	const categorySelected = computed(() => {
 			switch (state.value.type) {
